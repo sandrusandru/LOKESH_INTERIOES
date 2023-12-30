@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="service.css">
+</head>
+
+<body>
+    <section>
+        <img src="Our-Projects.png" alt="our" class="ourproject">
+        <div class="container">
+            <video  autoplay muted width="300px">
+                <source src="workvideo.mp4" type="video/mp4">
+              </video>
+            <img src="Images/img8.jpg" alt="1" class="images">
+            <img src="Images/img2.jpg" alt="1" class="images">
+            <img src="Images/img3.jpg" alt="1" class="images">
+            <img src="Images/img4.jpg" alt="1" class="images">
+            <img src="Images/img5.jpg" alt="1" class="images">
+            <img src="Images/img1.jpg" alt="1" class="images">
+            <img src="Images/img6.jpg" alt="1" class="images">
+            <img src="Images/img7.jpg" alt="1" class="images">
+            <img src="Images/img10.jpg" alt="1" class="images">
+            <img src="Images/img11.jpg" alt="1" class="images">
+            <img src="Images/img12.jpg" alt="1" class="images">
+            <img src="Images/img11.jpg" alt="1" class="images">
+            <img src="Images/img15.jpg" alt="1" class="images">
+            <img src="Images/img16.jpg" alt="1" class="images">
+            <img src="Images/img15.jpg" alt="1" class="images">
+            <img src="Images/img9.jpg" alt="1" class="images">
+            <img src="Images/img13.jpg" alt="1" class="images">
+        </div>
+    </section>
+
+    <script>
+        const bigbox = document.createElement("div")
+        bigbox.id = "bigbox";
+        document.body.appendChild(bigbox);
+
+        const images = document.querySelectorAll(".images");
+
+        images.forEach(pix => {
+            pix.addEventListener("click", () => {
+                bigbox.classList.add('active');
+                const img = document.createElement('img')
+                img.src = pix.src;
+                img.id = "img";
+                while (bigbox.firstChild) {
+                    bigbox.removeChild(bigbox.firstChild)
+                }
+                bigbox.append(img)
+            })
+        });
+
+        bigbox.addEventListener("click", () => {
+            bigbox.classList.remove('active')
+        })
+    </script>
+</body>
+
+</html>
